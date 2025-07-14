@@ -1,0 +1,13 @@
+@import '../../globalStyles/variables';
+
+.loadingContainer {
+  @include flex-center;
+  flex-direction: column;
+  height: 100vh;
+  gap: $spacing-md;
+}
+
+.loadingText {
+  color: $text-color;
+  font-size: 1.1rem;
+}

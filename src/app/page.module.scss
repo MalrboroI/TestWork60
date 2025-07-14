@@ -1,0 +1,79 @@
+@import '../app/globalStyles/variables';
+@import '../app/globalStyles/mixins';
+
+.container {
+  max-width: 100%;
+  padding: 0;
+}
+
+.hero {
+  background: gray;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: $spacing-xl * 2 $spacing-md;
+  margin-bottom: $spacing-xl;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__title {
+    font-size: 2.5rem;
+    margin-bottom: $spacing-md;
+    line-height: 1.2;
+  }
+
+  &__subtitle {
+    font-size: 1.25rem;
+    margin-bottom: $spacing-xl;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-md;
+    flex-wrap: wrap;
+  }
+
+  &__button {
+    padding: $spacing-md $spacing-xl;
+    background-color: none;
+    color: white;
+    border: 2px solid white;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+      transform: translateY(-2px);
+    }
+
+    &--secondary {
+      background-color: transparent;
+      border: 2px solid white;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+
+  @include respond-to(md) {
+    padding: $spacing-xl * 3 $spacing-md;
+
+    &__title {
+      font-size: 3.5rem;
+    }
+
+    &__subtitle {
+      font-size: 1.5rem;
+    }
+  }
+}

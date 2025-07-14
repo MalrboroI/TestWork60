@@ -1,0 +1,135 @@
+@import "../../globalStyles/variables";
+@import "../../globalStyles/mixins";
+
+.header {
+  background-color: black;
+  border-bottom: 1px solid #eaeaea;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0;
+
+  &__topBar {
+    background-color: black;
+    padding: 8px 0;
+    font-size: 0.85rem;
+  }
+
+  &__topContainer {
+    @include flex-center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+  }
+
+  &__contacts {
+    display: flex;
+    gap: $spacing-lg;
+    color: $primary-color;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    svg {
+      width: 14px;
+      height: 14px;
+      color: red;
+    }
+  }
+
+  &__main {
+    padding: 10px 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+    height: 60px;
+    position: relative;
+  }
+
+  &__logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: $primary-color;
+    text-decoration: none;
+    padding: 10px 0;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: $spacing-lg;
+  }
+
+  &__login,
+  &__logout {
+    padding: $spacing-sm $spacing-md;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+
+  &__login {
+    color: $primary-color;
+    border: 1px solid $primary-color;
+
+    &:hover {
+      background-color: rgba($primary-color, 0.1);
+    }
+  }
+
+  &__logout {
+    background-color: #ffebee;
+    color: #f44336;
+
+    &:hover {
+      background-color: #ffcdd2;
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+  }
+
+  &__name {
+    font-weight: 500;
+    color: white;
+  }
+
+  @include respond-to(sm) {
+    padding: 0;
+
+    
+    &__container {
+      padding: 0 $spacing-lg;
+    }
+
+    &__topBar {
+      padding: 5px 0;
+    }
+
+    &__links {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import '../../globalStyles/mixins';
+@import '../../globalStyles/variables';
+
+.footer {
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
+  padding: $spacing-lg 0;
+  margin-top: auto;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+    text-align: center;
+  }
+
+  &__text {
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+  @include respond-to(sm) {
+    padding: $spacing-xl 0;
+
+    &__container {
+      padding: 0 $spacing-lg;
+    }
+  }
+}

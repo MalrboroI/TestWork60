@@ -1,0 +1,57 @@
+@import '../../globalStyles/variables';
+
+.productsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.errorMessage {
+  color: $error-color;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+}
+
+.products{
+    &__links {
+    display: flex;
+    gap: $spacing-md;
+
+    a {
+      color: #333;
+      text-decoration: none;
+      padding: 10px;
+      font-size: 0.9rem;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    grid-template-columns: 1fr;
+  }
+}
